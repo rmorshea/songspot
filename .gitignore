@@ -1,0 +1,11 @@
+# Jupyter Files
+.ipynb_checkpoints/
+*.ipynb
+
+# post caches
+tmp/cache/stale.json
+tmp/cache/pending.json
+
+# security credentials
+setup_local_env.sh
+setup_heroku_env.sh

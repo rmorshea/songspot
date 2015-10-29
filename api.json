@@ -1,0 +1,11 @@
+{"twitter": {
+	"consumer-key": "fygrKsDk5mVkyOeuy3hoQNjZc",
+	"consumer-secret": "URdGEA4UROrgDoVmaLSIxradGx1BG8kjzzF6QiImKiRTLA2oIy",
+	"access-token": "3933391164-w9QOVEW8R4LGiDjmmOuGgWhj6IzxKGrfXJs4ZBQ",
+	"access-token-secret": "VMJet89gMpFQF9jfh4PIqHGfQTVraejvSK7qYBQ6WVzDp"
+	},
+ "youtube": {
+ 	"api-key": "AIzaSyAG514nLZ901SHN6MRQ1xyDzp6-rezjz88",
+ 	"service-name": "youtube",
+ 	"version": "v3"}
+ }
