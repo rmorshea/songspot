@@ -457,11 +457,10 @@ if __name__ == '__main__':
     for k, v in setup_globals(**kwarg_types['--']).items():
         globals()[k] = v
 
-    one_hour = 60*60 # seconds
-    half_hour = one_hour/2
-    five_hours = one_hour*5
+    fifteen_mins = 60*15 # seconds
+    five_hours = fifteen_mins*4*5
 
     while True:
-        if int(time.time())%(five_hours)<one_hour:
+        if int(time.time())%(five_hours)<fifteen_mins:
             status_update('listentothis')
-        time.sleep(one_hour)
+        time.sleep(fifteen_mins)
