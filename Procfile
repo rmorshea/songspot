@@ -1,1 +1,1 @@
-worker: python songspot.py
+web: python songspot.py

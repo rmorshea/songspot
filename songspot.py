@@ -457,10 +457,18 @@ if __name__ == '__main__':
     for k, v in setup_globals(**kwarg_types['--']).items():
         globals()[k] = v
 
-    fifteen_mins = 60*15 # seconds
-    five_hours = fifteen_mins*4*5
+    margin = 60 # seconds
+    interval = margin*2
 
     while True:
-        if int(time.time())%(five_hours)<fifteen_mins:
-            status_update('listentothis')
-        time.sleep(fifteen_mins)
+        remainder = int(time.time())%(interval)
+        diff, m = (interval-remainder)/60, margin/60
+        print "time remainder : %d mins (margin=%d)" % (diff, m)
+        if (interval-remainder)<=margin:
+            post, others = status_update('listentothis')
+            url = post['song']['external_urls'].get('youtube')
+            url = url or post['song']['external_urls']['spotify']
+            print "remainder within margin : status updated"
+            print "posting=%s" % url
+        sys.stdout.flush()
+        time.sleep(margin)
